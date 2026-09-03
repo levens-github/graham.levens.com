@@ -1,0 +1,233 @@
+/* ============================================================
+   GRAHAM.LEVENS — photographer
+   Brand: dark warm ground, paper text, sunset-orange accent
+   (same orange family as the resume), editorial serif display.
+   ============================================================ */
+
+:root {
+  --ink: #15181D;
+  --ink-2: #1D2128;
+  --paper: #F2EEE6;
+  --paper-dim: #B9B4AA;
+  --muted: #7E7A72;
+  --accent: #F26B3A;
+  --accent-deep: #D9542A;
+  --rule: #2B3038;
+
+  --display: "DM Serif Display", Georgia, "Times New Roman", serif;
+  --body: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  --container: 1240px;
+  --gutter: clamp(1.25rem, 3vw, 2.5rem);
+  --section-y: clamp(3.5rem, 8vw, 7rem);
+}
+
+/* ---------- Reset ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+body {
+  margin: 0;
+  font-family: var(--body);
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--paper);
+  background: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+img, svg { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a:hover { color: var(--accent); }
+p { margin: 0 0 1em; }
+p:last-child { margin-bottom: 0; }
+h1, h2, h3 { text-wrap: balance; }
+p, li { text-wrap: pretty; }
+
+/* ---------- Type ---------- */
+.display {
+  font-family: var(--display);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+  margin: 0;
+  color: var(--paper);
+}
+h1.display { font-size: clamp(3rem, 10vw, 7.5rem); }
+.display--sm { font-size: clamp(2.25rem, 5vw, 3.75rem); }
+
+.eyebrow {
+  font-family: var(--body);
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 0 0 1rem;
+}
+.lede {
+  font-size: clamp(1.1rem, 1.6vw, 1.35rem);
+  line-height: 1.5;
+  max-width: 58ch;
+  color: var(--paper-dim);
+}
+.lede em, .about em, .section__note em { font-style: italic; color: var(--paper); }
+
+/* ---------- Layout ---------- */
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+.section { padding-block: var(--section-y); }
+.section--alt { background: var(--ink-2); }
+.section__head {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+@media (min-width: 800px) {
+  .section__head { grid-template-columns: 1fr 1.4fr; align-items: end; }
+}
+.section__note {
+  color: var(--paper-dim);
+  max-width: 60ch;
+  font-size: 1.05rem;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  padding-block: clamp(4rem, 12vw, 9rem) clamp(3.5rem, 8vw, 7rem);
+  border-bottom: 1px solid var(--rule);
+}
+.hero .lede { margin-top: 1.5rem; }
+.hero__links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.75rem;
+  margin-top: 2.25rem;
+  font-weight: 500;
+}
+.hero__links a:not(.button) { text-decoration: none; color: var(--paper-dim); }
+.hero__links a:not(.button):hover { color: var(--accent); }
+
+/* ---------- Buttons ---------- */
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.35rem;
+  background: var(--accent);
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  transition: background 180ms ease, color 180ms ease, border-color 180ms ease;
+}
+.button:hover { background: var(--accent-deep); border-color: var(--accent-deep); color: var(--ink); }
+.button--ghost { background: transparent; color: var(--paper); border-color: var(--paper-dim); }
+.button--ghost:hover { background: var(--paper); color: var(--ink); border-color: var(--paper); }
+
+/* ---------- Work grid ---------- */
+.grid {
+  columns: 1;
+  column-gap: 1rem;
+}
+@media (min-width: 560px)  { .grid { columns: 2; } }
+@media (min-width: 900px)  { .grid { columns: 3; column-gap: 1.25rem; } }
+@media (min-width: 1200px) { .grid { columns: 4; } }
+.grid figure {
+  margin: 0 0 1rem;
+  break-inside: avoid;
+  background: var(--ink-2);
+  border-radius: 6px;
+  overflow: hidden;
+}
+@media (min-width: 900px) { .grid figure { margin-bottom: 1.25rem; } }
+.grid img {
+  width: 100%;
+  height: auto;
+  transition: transform 500ms cubic-bezier(.2,.7,.2,1), opacity 300ms ease;
+}
+.grid figure:hover img { transform: scale(1.02); }
+
+/* ---------- About ---------- */
+.about {
+  display: grid;
+  gap: clamp(2.5rem, 5vw, 5rem);
+}
+@media (min-width: 900px) {
+  .about { grid-template-columns: 1.3fr 1fr; align-items: start; }
+}
+.about__text p { max-width: 62ch; font-size: 1.08rem; color: var(--paper-dim); }
+.about__text .display { margin-bottom: 1.5rem; }
+.about__text p:last-child { margin-top: 2rem; }
+.about__side .eyebrow { margin-top: 0; }
+.about__side .eyebrow + .quote,
+.rec + .eyebrow { margin-top: 2.5rem; }
+
+.rec {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.rec li {
+  padding: 0.9rem 0;
+  border-top: 1px solid var(--rule);
+  display: grid;
+  gap: 0.15rem;
+}
+.rec li:last-child { border-bottom: 1px solid var(--rule); }
+.rec strong { font-weight: 700; color: var(--paper); }
+.rec span { font-size: 0.9rem; color: var(--muted); }
+
+.quote {
+  margin: 0 0 1.5rem;
+  padding-left: 1rem;
+  border-left: 2px solid var(--accent);
+}
+.quote p { font-family: var(--display); font-size: 1.2rem; line-height: 1.35; color: var(--paper); margin-bottom: 0.4rem; }
+.quote cite { font-style: normal; font-size: 0.85rem; color: var(--muted); }
+
+/* ---------- Contact ---------- */
+.contact-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+.contact-stack a {
+  font-family: var(--display);
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  line-height: 1.1;
+  text-decoration: none;
+  width: fit-content;
+  color: var(--paper);
+}
+.contact-stack a:hover { color: var(--accent); }
+
+/* ---------- Footer ---------- */
+.site-footer {
+  border-top: 1px solid var(--rule);
+  padding-block: 1.75rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+.site-footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}

@@ -1,0 +1,14 @@
+# Local-only project notes — not for GitHub
+CONTEXT.md
+AGENTS.md
+
+# Local staging — never pushed to GitHub.
+# Use incoming/ for handoff materials Graham sends, work-in-progress drafts,
+# and anything to keep on disk but not publish. If a file matures and should
+# go live, move it OUT of incoming/ into the appropriate folder before committing.
+incoming/
+
+# Editor / OS
+.DS_Store
+.vscode/
+*.swp
