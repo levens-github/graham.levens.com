@@ -32,64 +32,40 @@
 <header class="container topbar">
   <a class="topbar__name" href="#top">Graham Levens</a>
   <nav aria-label="Sections">
-    <a href="#portfolio">Portfolio</a>
     <a href="#experience">Experience</a>
+    <a href="#credentials">Credentials</a>
     <a href="#cards">Comment cards</a>
+    <a href="/resume/">Resume</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
 
 <!-- ============ HERO ============ -->
 <section class="hero" id="top">
-  <div class="container">
-    <p class="eyebrow">Photographer &middot; Rancho Cucamonga, California</p>
-    <h1 class="display">Graham Levens</h1>
-    <p class="lede">I photograph people who did not plan on being photographed, and I make them glad they were.</p>
-    <div class="hero__links">
-      <a class="button" href="#portfolio">Portfolio</a>
-      <a class="button button--ghost" href="/graham-levens-resume.pdf">Resume (PDF)</a>
-      <a href="mailto:Graham.Levens@gmail.com">Graham.Levens@gmail.com</a>
+  <div class="container hero__grid">
+    <div>
+      <p class="eyebrow">Photographer &middot; Rancho Cucamonga, California</p>
+      <h1 class="display">Graham Levens</h1>
+      <p class="lede">I photograph people who did not plan on being photographed, and I make them glad they were.</p>
+      <div class="hero__links">
+        <a class="button" href="/resume/">Resume</a>
+        <a class="button button--ghost" href="mailto:Graham.Levens@gmail.com">Email</a>
+        <a href="tel:+19092750664">(909) 275-0664</a>
+      </div>
     </div>
-
+    <!-- Headshot: replace the placeholder div with <img class="headshot" src="/images/headshot.jpg" alt="Graham Levens"> -->
+    <div class="headshot headshot--placeholder" role="img" aria-label="Headshot placeholder">
+      <span>GL</span>
+      <small>Headshot</small>
+    </div>
+  </div>
+  <div class="container">
     <ul class="stats" aria-label="At a glance">
       <li><strong>4 yrs</strong><span>guest-facing work: cruise ship, mountain camp, restaurants</span></li>
       <li><strong>#1</strong><span>in Photography Department sales, Pride of America 2025&ndash;26</span></li>
       <li><strong>40+</strong><span>written guest comment cards in one contract year</span></li>
       <li><strong>Eagle</strong><span>Scout, Troop 601, Upland, California, 2022</span></li>
     </ul>
-  </div>
-</section>
-
-<!-- ============ PORTFOLIO ============ -->
-<section class="section" id="portfolio">
-  <div class="container">
-    <div class="section__head">
-      <h2 class="display display--sm">Portfolio</h2>
-      <p class="note">Portraits and candids made on the move: staircase formals, backdrop studio sessions, deck and port-day candids. Most were made in under two minutes with people I had just met, then culled, retouched, and on the gallery wall the same night.</p>
-    </div>
-
-    <div class="grid">
-      <figure><img src="/images/portfolio/03.jpg" width="1120" height="1400" alt="Couple embracing on the ship's grand staircase, formal night portrait" loading="eager"></figure>
-      <figure><img src="/images/portfolio/12.jpg" width="1050" height="1400" alt="Black and white portrait of a smiling man in a bandana on deck"></figure>
-      <figure><img src="/images/portfolio/09.jpg" width="1120" height="1400" alt="Woman laughing as a man hugs her from behind, painted studio backdrop"></figure>
-      <figure><img src="/images/portfolio/19.jpg" width="1400" height="1120" alt="Man posing with a night-sky backdrop of the Pride of America"></figure>
-      <figure><img src="/images/portfolio/01.jpg" width="1120" height="1400" alt="Family of three on the grand staircase"></figure>
-      <figure><img src="/images/portfolio/07.jpg" width="1120" height="1400" alt="Group of four on a painted backdrop, two men kneeling in front"></figure>
-      <figure><img src="/images/portfolio/13.jpg" width="1050" height="1400" alt="Black and white candid of a man in sunglasses giving a thumbs up beside the ship"></figure>
-      <figure><img src="/images/portfolio/16.jpg" width="1120" height="1400" alt="Couple standing on a wooden pier backdrop"></figure>
-      <figure><img src="/images/portfolio/05.jpg" width="1120" height="1400" alt="Two men, one in red suspenders, on the grand staircase"></figure>
-      <figure><img src="/images/portfolio/20.jpg" width="1400" height="1120" alt="Two men clowning in front of a sunset palm backdrop"></figure>
-      <figure><img src="/images/portfolio/08.jpg" width="1120" height="1400" alt="Woman in a floral dress and a man in red suspenders, painted backdrop"></figure>
-      <figure><img src="/images/portfolio/14.jpg" width="1050" height="1400" alt="Black and white portrait of a man in sunglasses on a beach"></figure>
-      <figure><img src="/images/portfolio/02.jpg" width="1120" height="1400" alt="Couple on the grand staircase, formal portrait"></figure>
-      <figure><img src="/images/portfolio/11.jpg" width="1120" height="1400" alt="Two men playing in front of an ocean-wave backdrop"></figure>
-      <figure><img src="/images/portfolio/17.jpg" width="1120" height="1400" alt="Close portrait of a couple on the pier backdrop"></figure>
-      <figure><img src="/images/portfolio/06.jpg" width="1120" height="1400" alt="Woman and man laughing together on the staircase"></figure>
-      <figure><img src="/images/portfolio/15.jpg" width="1050" height="1400" alt="Black and white candid of a man in a bandana and sunglasses"></figure>
-      <figure><img src="/images/portfolio/10.jpg" width="1120" height="1400" alt="Group of four on a painted backdrop"></figure>
-      <figure><img src="/images/portfolio/04.jpg" width="1120" height="1400" alt="Woman and man in a pink floral shirt on the staircase"></figure>
-      <figure><img src="/images/portfolio/18.jpg" width="1400" height="1120" alt="Man in a grass wig playing ukulele, sunset palm backdrop"></figure>
-    </div>
   </div>
 </section>
 
@@ -182,49 +158,59 @@
   <div class="container">
     <div class="section__head">
       <h2 class="display display--sm">From the comment cards</h2>
-      <p class="note">Norwegian guests fill out a Vacation Hero card when a crew member stands out. Graham received more than 40 in one contract year. Ten of them, in the guests&rsquo; own words; each links to the scanned card.</p>
+      <p class="note">Norwegian guests fill out a Vacation Hero card when a crew member stands out. Graham received more than 40 in one contract year. Ten of them, newest first, in the guests&rsquo; own words. Hover or tap the thumbnail to see the card.</p>
     </div>
 
     <div class="cards">
       <figure class="card">
-        <p>&ldquo;We weren&rsquo;t going to get our picture taken and certainly weren&rsquo;t planning to buy any, but with his friendliness and expert eye, we have some really good pictures.&rdquo;</p>
-        <footer><span><strong>Tonja Caldwell</strong> &middot; March 2026</span><a href="/images/cards/tonja-caldwell.jpg">View card</a></footer>
-      </figure>
-      <figure class="card">
-        <p>&ldquo;Graham took photos of our family at Cagney&rsquo;s. They were excellent and we purchased four of them. We later asked him to do portraits for our son and daughter-in-law. He has a great way with people and an excellent eye.&rdquo;</p>
-        <footer><span><strong>Katherine Slaughter</strong> &middot; March 2026</span><a href="/images/cards/katherine-slaughter.jpg">View card</a></footer>
-      </figure>
-      <figure class="card">
-        <p>&ldquo;Graham is an expert in photography. He was always there to help and advise us. The quality of your photo department is the best I have seen.&rdquo;</p>
-        <footer><span><strong>Steve Ford</strong> &middot; February 2026</span><a href="/images/cards/steve-ford.jpg">View card</a></footer>
-      </figure>
-      <figure class="card">
-        <p>&ldquo;My &lsquo;personal&rsquo; photographer. Cheerful, helpful, fun. I didn&rsquo;t want photos since I was solo, but Graham was awesome and made me feel at ease and have fun with the photos. Super job!&rdquo;</p>
-        <footer><span><strong>Annemarie Meadows</strong> &middot; November 2025</span><a href="/images/cards/annemarie-meadows.jpg">View card</a></footer>
+        <p>&ldquo;Graham is very professional, finds out guest relationships to get to know them in order to take amazing photos! He is amazing and an asset to NCL!&rdquo;</p>
+        <footer><span><strong>Billie Greene</strong><time datetime="2026-05-22">May 22, 2026</time></span>
+          <a class="thumb" href="/images/cards/billie-greene.jpg" aria-label="View Billie Greene's card"><img src="/images/cards/thumbs/billie-greene.jpg" alt="" loading="lazy"><span class="pop"><img src="/images/cards/billie-greene.jpg" alt="Scanned comment card from Billie Greene" loading="lazy"></span></a></footer>
       </figure>
       <figure class="card">
         <p>&ldquo;We won the photo package and he assisted every day to ensure we had enough beautiful pictures to choose from. He remembered our names and was so polite every day.&rdquo;</p>
-        <footer><span><strong>Karl &amp; Pam Nikula</strong> &middot; May 2026</span><a href="/images/cards/karl-pam-nikula.jpg">View card</a></footer>
+        <footer><span><strong>Karl &amp; Pam Nikula</strong><time datetime="2026-05-16">May 16, 2026</time></span>
+          <a class="thumb" href="/images/cards/karl-pam-nikula.jpg" aria-label="View the Nikulas' card"><img src="/images/cards/thumbs/karl-pam-nikula.jpg" alt="" loading="lazy"><span class="pop"><img src="/images/cards/karl-pam-nikula.jpg" alt="Scanned comment card from Karl and Pam Nikula" loading="lazy"></span></a></footer>
       </figure>
       <figure class="card">
-        <p>&ldquo;Graham was very patient and calm during photo portraits and helping with choosing packages and pictures to print. He was able to capture the family as we were, versus poses.&rdquo;</p>
-        <footer><span><strong>Maria Young</strong> &middot; January 2026</span><a href="/images/cards/maria-young.jpg">View card</a></footer>
+        <p>&ldquo;Graham took photos of our family at Cagney&rsquo;s. They were excellent and we purchased four of them. We later asked him to do portraits for our son and daughter-in-law. He has a great way with people and an excellent eye.&rdquo;</p>
+        <footer><span><strong>Katherine Slaughter</strong><time datetime="2026-03-14">March 14&ndash;21, 2026</time></span>
+          <a class="thumb" href="/images/cards/katherine-slaughter.jpg" aria-label="View Katherine Slaughter's card"><img src="/images/cards/thumbs/katherine-slaughter.jpg" alt="" loading="lazy"><span class="pop"><img src="/images/cards/katherine-slaughter.jpg" alt="Scanned comment card from Katherine Slaughter" loading="lazy"></span></a></footer>
       </figure>
       <figure class="card">
-        <p>&ldquo;He is an amazing young man. He knows just how to stand us to make the best photo. Very kind and caring.&rdquo;</p>
-        <footer><span><strong>Lois Griffin</strong> &middot; January 2026</span><a href="/images/cards/lois-griffin.jpg">View card</a></footer>
+        <p>&ldquo;We weren&rsquo;t going to get our picture taken and certainly weren&rsquo;t planning to buy any, but with his friendliness and expert eye, we have some really good pictures.&rdquo;</p>
+        <footer><span><strong>Tonja Caldwell</strong><time datetime="2026-03-07">March 7&ndash;14, 2026</time></span>
+          <a class="thumb" href="/images/cards/tonja-caldwell.jpg" aria-label="View Tonja Caldwell's card"><img src="/images/cards/thumbs/tonja-caldwell.jpg" alt="" loading="lazy"><span class="pop"><img src="/images/cards/tonja-caldwell.jpg" alt="Scanned comment card from Tonja Caldwell" loading="lazy"></span></a></footer>
       </figure>
       <figure class="card">
-        <p>&ldquo;Graham with photography was very kind and extremely good at his job. You could tell how much it mattered to him and how professional he is. He took our photos every day and was always so sweet.&rdquo;</p>
-        <footer><span><strong>Bailey Robb</strong> &middot; October 2025</span><a href="/images/cards/bailey-robb.jpg">View card</a></footer>
-      </figure>
-      <figure class="card">
-        <p>&ldquo;Graham is very professional, finds out guest relationships to get to know them in order to take amazing photos! He is amazing and an asset to NCL!&rdquo;</p>
-        <footer><span><strong>Billie Greene</strong> &middot; May 2026</span><a href="/images/cards/billie-greene.jpg">View card</a></footer>
+        <p>&ldquo;Graham is an expert in photography. He was always there to help and advise us. The quality of your photo department is the best I have seen.&rdquo;</p>
+        <footer><span><strong>Steve Ford</strong><time datetime="2026-02-14">February 14, 2026</time></span>
+          <a class="thumb" href="/images/cards/steve-ford.jpg" aria-label="View Steve Ford's card"><img src="/images/cards/thumbs/steve-ford.jpg" alt="" loading="lazy"><span class="pop"><img src="/images/cards/steve-ford.jpg" alt="Scanned comment card from Steve Ford" loading="lazy"></span></a></footer>
       </figure>
       <figure class="card">
         <p>&ldquo;Best customer service on the boat.&rdquo;</p>
-        <footer><span><strong>Alex Miller</strong> &middot; February 2026</span><a href="/images/cards/alex-miller.jpg">View card</a></footer>
+        <footer><span><strong>Alex Miller</strong><time datetime="2026-02-14">February 14, 2026</time></span>
+          <a class="thumb" href="/images/cards/alex-miller.jpg" aria-label="View Alex Miller's card"><img src="/images/cards/thumbs/alex-miller.jpg" alt="" loading="lazy"><span class="pop"><img src="/images/cards/alex-miller.jpg" alt="Scanned comment card from Alex Miller" loading="lazy"></span></a></footer>
+      </figure>
+      <figure class="card">
+        <p>&ldquo;He is an amazing young man. He knows just how to stand us to make the best photo. Very kind and caring.&rdquo;</p>
+        <footer><span><strong>Lois Griffin</strong><time datetime="2026-01-03">January 3&ndash;10, 2026</time></span>
+          <a class="thumb" href="/images/cards/lois-griffin.jpg" aria-label="View Lois Griffin's card"><img src="/images/cards/thumbs/lois-griffin.jpg" alt="" loading="lazy"><span class="pop"><img src="/images/cards/lois-griffin.jpg" alt="Scanned comment card from Lois Griffin" loading="lazy"></span></a></footer>
+      </figure>
+      <figure class="card">
+        <p>&ldquo;Graham was very patient and calm during photo portraits and helping with choosing packages and pictures to print. He was able to capture the family as we were, versus poses.&rdquo;</p>
+        <footer><span><strong>Maria Young</strong><time datetime="2026-01-03">January 3, 2026</time></span>
+          <a class="thumb" href="/images/cards/maria-young.jpg" aria-label="View Maria Young's card"><img src="/images/cards/thumbs/maria-young.jpg" alt="" loading="lazy"><span class="pop"><img src="/images/cards/maria-young.jpg" alt="Scanned comment card from Maria Young" loading="lazy"></span></a></footer>
+      </figure>
+      <figure class="card">
+        <p>&ldquo;My &lsquo;personal&rsquo; photographer. Cheerful, helpful, fun. I didn&rsquo;t want photos since I was solo, but Graham was awesome and made me feel at ease and have fun with the photos. Super job!&rdquo;</p>
+        <footer><span><strong>Annemarie Meadows</strong><time datetime="2025-11-15">November 15, 2025</time></span>
+          <a class="thumb" href="/images/cards/annemarie-meadows.jpg" aria-label="View Annemarie Meadows' card"><img src="/images/cards/thumbs/annemarie-meadows.jpg" alt="" loading="lazy"><span class="pop"><img src="/images/cards/annemarie-meadows.jpg" alt="Scanned comment card from Annemarie Meadows" loading="lazy"></span></a></footer>
+      </figure>
+      <figure class="card">
+        <p>&ldquo;Graham with photography was very kind and extremely good at his job. You could tell how much it mattered to him and how professional he is. He took our photos every day and was always so sweet.&rdquo;</p>
+        <footer><span><strong>Bailey Robb</strong><time datetime="2025-10-06">October 6, 2025</time></span>
+          <a class="thumb" href="/images/cards/bailey-robb.jpg" aria-label="View Bailey Robb's card"><img src="/images/cards/thumbs/bailey-robb.jpg" alt="" loading="lazy"><span class="pop"><img src="/images/cards/bailey-robb.jpg" alt="Scanned comment card from Bailey Robb" loading="lazy"></span></a></footer>
       </figure>
     </div>
   </div>
@@ -239,7 +225,8 @@
       <a href="tel:+19092750664">(909) 275-0664</a>
     </div>
     <div class="contact__actions">
-      <a class="button" href="/graham-levens-resume.pdf">Resume (PDF)</a>
+      <a class="button" href="/resume/">View resume</a>
+      <a class="button button--ghost" href="/graham-levens-resume.pdf" download="Graham-Levens-Resume.pdf">Download PDF</a>
     </div>
   </div>
 </section>
