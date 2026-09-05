@@ -156,24 +156,47 @@ h1, h2 { font-family: var(--serif); font-variation-settings: "opsz" 144, "SOFT" 
 .feature .thumb { width: 72px; height: 92px; }
 .feature .thumb .pop { right: 0; }
 
-/* ---------- All forty-one cards (disclosure) ---------- */
-.more { margin-top: 2rem; border-top: 1px solid var(--rule); }
-.more summary {
-  list-style: none; cursor: pointer;
-  padding: 1.25rem 0;
-  display: flex; align-items: center; gap: 0.75rem;
-  font-family: var(--serif); font-size: clamp(1.2rem, 2vw, 1.45rem); color: var(--accent);
-  font-variation-settings: "opsz" 144, "SOFT" 30;
+/* ---------- All forty-one cards (peek + expand) ---------- */
+/* Collapsed: the top of the next row of cards shows through a fade with a button over it.
+   Expanded: full list with a sticky "Show fewer" pill. Without JS everything is simply shown. */
+.more { margin-top: 2rem; padding-top: 1.75rem; border-top: 1px solid var(--rule); position: relative; --peek: 15rem; }
+.more__window { position: relative; }
+.js .more:not(.is-open) .more__window {
+  max-height: var(--peek);
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to bottom, #000 0, #000 35%, transparent 100%);
+          mask-image: linear-gradient(to bottom, #000 0, #000 35%, transparent 100%);
 }
-.more summary::-webkit-details-marker { display: none; }
-.more summary::before {
-  content: ""; width: 9px; height: 9px; flex: 0 0 auto;
-  border-right: 1.6px solid currentColor; border-bottom: 1.6px solid currentColor;
-  transform: rotate(-45deg); transition: transform 150ms ease; margin-top: -3px;
+.js .more__window { transition: max-height 480ms cubic-bezier(.2,.7,.2,1); }
+.js .more:not(.is-open) .more__window .thumb .pop { display: none; }
+.js .more:not(.is-open) .more__window .card { pointer-events: none; }
+.js .more:not(.is-open) .more__foot { display: none; }
+.more__toggle {
+  position: absolute; left: 50%; bottom: 1.25rem; transform: translateX(-50%);
+  display: none; flex-direction: column; align-items: center; gap: 0.15rem;
+  padding: 0.8rem 1.4rem; border-radius: 999px; cursor: pointer;
+  background: var(--panel); color: var(--accent); border: 1px solid var(--rule);
+  box-shadow: 0 6px 24px rgba(31, 78, 95, 0.12), 0 1px 3px rgba(0,0,0,0.06);
+  font-family: var(--serif); font-size: clamp(1.1rem, 1.8vw, 1.3rem); font-variation-settings: "opsz" 144, "SOFT" 30;
+  transition: transform 150ms ease, box-shadow 150ms ease;
 }
-.more[open] summary::before { transform: rotate(45deg); margin-top: -6px; }
-.more summary:hover span { text-decoration: underline; text-underline-offset: 3px; }
-.more summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.js .more:not(.is-open) .more__toggle { display: flex; }
+.more__toggle small { font-family: var(--sans); font-size: 0.78rem; color: var(--muted); letter-spacing: 0.02em; }
+.more__toggle:hover { transform: translateX(-50%) translateY(-2px); box-shadow: 0 10px 28px rgba(31, 78, 95, 0.18), 0 1px 3px rgba(0,0,0,0.06); }
+.more__toggle:hover span { text-decoration: underline; text-underline-offset: 3px; }
+.more__toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.more__foot { position: sticky; bottom: 1rem; display: flex; justify-content: center; margin: 1.5rem 0 0; pointer-events: none; }
+.more__less {
+  pointer-events: auto; cursor: pointer;
+  padding: 0.55rem 1.1rem; border-radius: 999px;
+  background: var(--accent); color: #fff; border: 0;
+  font: 600 0.82rem/1 var(--sans); letter-spacing: 0.04em;
+  box-shadow: 0 6px 20px rgba(31, 78, 95, 0.25);
+}
+.more__less:hover { background: #17404e; }
+.more__less:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+@media (max-width: 639px) { .more { --peek: 17rem; } }
+@media (prefers-reduced-motion: reduce) { .js .more__window, .more__toggle { transition: none; } }
 .cards--all { margin-top: 0.25rem; }
 .cards--all .card { padding: 1.2rem 1.25rem 1rem; gap: 1rem; }
 .cards--all .card blockquote { font-size: 0.95rem; line-height: 1.5; }
