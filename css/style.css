@@ -57,12 +57,13 @@ h1, h2 { font-family: var(--serif); font-variation-settings: "opsz" 144, "SOFT" 
 .head .intro { font-size: clamp(1.05rem, 1.4vw, 1.2rem); line-height: 1.6; color: var(--ink-2); max-width: 58ch; }
 .head .intro + .intro { margin-top: 1rem; }
 .head .contact { margin-top: 2rem; color: var(--ink); font-size: 1rem; display: flex; flex-wrap: wrap; gap: 0.25rem 1.75rem; }
-.book {
-  margin: -0.75rem 0 2rem; padding: 1.1rem 1.35rem; max-width: 58ch;
-  background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0;
-}
-.book__lead { margin: 0; font-family: var(--serif); font-size: clamp(1.1rem, 1.6vw, 1.3rem); color: var(--accent); font-variation-settings: "opsz" 144, "SOFT" 30; line-height: 1.35; }
-.book__contact { margin: 0.6rem 0 0; color: var(--ink); font-weight: 600; font-size: 1rem; display: flex; flex-wrap: wrap; gap: 0.25rem 1.75rem; }
+.cta { background: var(--accent); color: var(--bg); margin-top: clamp(2.5rem, 6vw, 4rem); }
+.cta__in { padding-block: clamp(2rem, 4.5vw, 3.25rem); display: grid; gap: 1.25rem 3rem; align-items: center; }
+@media (min-width: 760px) { .cta__in { grid-template-columns: auto 1fr; } .cta__contact { justify-content: flex-end; text-align: right; } }
+.cta .kicker { color: rgba(247, 246, 242, 0.7); margin-bottom: 0.4rem; }
+.cta h2 { color: var(--bg); font-size: clamp(2rem, 4vw, 3rem); line-height: 1; margin: 0; }
+.cta__contact { margin: 0; display: flex; flex-wrap: wrap; gap: 0.35rem 2.25rem; font-family: var(--serif); font-size: clamp(1.15rem, 2vw, 1.5rem); font-variation-settings: "opsz" 144, "SOFT" 30; color: var(--bg); }
+.cta__contact span { white-space: nowrap; }
 .photo {
   width: 100%;
   max-width: 260px;
