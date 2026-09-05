@@ -12,7 +12,7 @@
   --ink-2: #474D4C;
   --muted: #7A817F;
   --accent: #1F4E5F;
-  --accent-soft: #E3ECEF;
+  --accent-soft: #E4EEE6;
   --rule: #DCDCD6;
   --box: #E7E6E1;
   --serif: "Fraunces", Georgia, "Times New Roman", serif;
@@ -57,6 +57,12 @@ h1, h2 { font-family: var(--serif); font-variation-settings: "opsz" 144, "SOFT" 
 .head .intro { font-size: clamp(1.05rem, 1.4vw, 1.2rem); line-height: 1.6; color: var(--ink-2); max-width: 58ch; }
 .head .intro + .intro { margin-top: 1rem; }
 .head .contact { margin-top: 2rem; color: var(--ink); font-size: 1rem; display: flex; flex-wrap: wrap; gap: 0.25rem 1.75rem; }
+.book {
+  margin: -0.75rem 0 2rem; padding: 1.1rem 1.35rem; max-width: 58ch;
+  background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 0 10px 10px 0;
+}
+.book__lead { margin: 0; font-family: var(--serif); font-size: clamp(1.1rem, 1.6vw, 1.3rem); color: var(--accent); font-variation-settings: "opsz" 144, "SOFT" 30; line-height: 1.35; }
+.book__contact { margin: 0.6rem 0 0; color: var(--ink); font-weight: 600; font-size: 1rem; display: flex; flex-wrap: wrap; gap: 0.25rem 1.75rem; }
 .photo {
   width: 100%;
   max-width: 260px;
