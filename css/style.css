@@ -312,4 +312,5 @@ h1, h2 { font-family: var(--serif); font-variation-settings: "opsz" 144, "SOFT" 
 }
 
 /* iOS auto-detected tel/email links must inherit the surrounding colour */
-.cta a, .foot a:not(.foot__ig), .head .contact a, .paper a { color: inherit; text-decoration: none; }
+.cta a, .foot a:not(.foot__ig), .head .contact a, .paper__contact a { color: inherit; text-decoration: none; }
+.cta a:hover, .foot a:not(.foot__ig):hover, .head .contact a:hover, .paper__contact a:hover { text-decoration: underline; text-underline-offset: 3px; }
