@@ -291,12 +291,12 @@ h1, h2 { font-family: var(--serif); font-variation-settings: "opsz" 144, "SOFT" 
 
 /* ---------- Footer ---------- */
 .foot { border-top: 1px solid var(--rule); margin-top: clamp(1rem, 3vw, 2rem); }
-.foot__in { padding-block: 2.75rem 3.25rem; display: grid; grid-template-columns: 1fr auto 1fr; gap: 1.5rem; align-items: center; }
+.foot__in { padding-block: 2rem 2.125rem; display: grid; grid-template-columns: 1fr auto 1fr; gap: 1.5rem; align-items: center; }
 .foot p { margin: 0; }
 .foot__who { text-align: left; }
 .foot__name { font-family: var(--serif); font-size: 1.25rem; color: var(--ink); font-variation-settings: "opsz" 144, "SOFT" 30; }
 .foot__role { margin-top: 0.3rem !important; color: var(--muted); font-size: 0.85rem; }
-.foot__qr { width: 96px; height: 96px; display: block; justify-self: center; }
+.foot__qr { width: 128px; height: 128px; display: block; justify-self: center; }
 .foot__reach { display: grid; gap: 0.3rem; justify-items: end; text-align: right; color: var(--ink); font-size: 0.92rem; font-weight: 500; }
 .foot__ig { display: inline-flex; width: 36px; height: 36px; align-items: center; justify-content: center; margin-top: 0.5rem; color: var(--green); border: 1px solid var(--rule); border-radius: 50%; }
 .foot__ig:hover { background: var(--accent-soft); }
